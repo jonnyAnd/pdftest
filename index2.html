@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World</title>
+  
+
+</head>
+<body>
+
+
+
+</body>
+<script>
+
+
+window.addEventListener('message', function(pdfdata) {
+    var b64 ='pdfdata'
+
+
+
+// Insert a link that allows the user to download the PDF file
+var link = document.createElement('a');
+link.innerHTML = 'Download PDF file';
+link.download = 'file.pdf';
+link.href = 'data:application/octet-stream;base64,' + b64;
+document.body.appendChild(link);
+})
+
+
+    
+
+
+
+
+</script> 
+
+</html>
