@@ -15,13 +15,13 @@
 
 
 window.addEventListener('message', function(pdfdata) {
-    var b64 =pdfdata
+    var b64 =pdfdata.data
 
 console.log("DATA--->"+pdfdata+" IT IS IN IFRAME")
 
 // Insert a link that allows the user to download the PDF file
 var link = document.createElement('a');
-link.innerHTML = b64;
+link.innerHTML = b64.data;
 link.download = 'file.pdf';
 link.href = 'data:application/octet-stream;base64,' + b64;
 document.body.appendChild(link);
